@@ -4,4 +4,4 @@
 
 #hi steven
 
-#kyle is white
+#kyle is tall
