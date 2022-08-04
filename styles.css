@@ -7,29 +7,56 @@ html, body {
     scroll-behavior: smooth;
     transition-timing-function: ease-in;
     text-align: center;
+    width: 100%;
+}
+body {
     background-color: black;
 }
-h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    border-bottom: white dotted 4px;
-    color: white;
-    overflow: hidden;  
-    background-color: transparent   ;
-    z-index: 1; 
-}
 
-.video {
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    position: fixed;
-    right: 0;
+#title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    text-shadow: #555;
+    font-weight: 200;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 15px;
+    color: white;  
+    position: relative;
+    overflow: hidden;
+}
+#title:before{
+    content: '';
+    position: absolute;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    border-bottom: white solid 1px;
+    width: 90%;
+ }
+.border-underline {
+    width: 80%;
+    border-bottom: white dashed 1px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.video {
+    width: 100%;
+} 
+video {
+    filter: blur(5px); 
+    position: absolute; 
+    left: 0;
+    top: 0;
+    width: 100%;
     z-index: -1;
+    outline: unset;
 }
 .parallax {
-    min-height: 200px;
+    min-height: 200px;  
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
