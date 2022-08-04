@@ -209,6 +209,7 @@ def nav(input):
 
     splitting = current_input.split(" ")
 
+
     if current_input == "help":
         print(
             "\n\tType 'look' to look everything in that room\n \tType 'move ____' and the room you want to move"
@@ -218,55 +219,65 @@ def nav(input):
         )
         print("\tType 'attack' hack the company in a room\n")
     
-    elif splitting[0] == "move":
-        move = False
-        for rmm in current_cave.paths:
-            if splitting[1] == rmm.name:
-                current_cave = rmm
-                move = True
-                rmm.enter(player_items)
-        if move == False:
-            print("You cannot move to that room")
+    # elif splitting[0] == "move":
+    #     move = False
+    #     for rmm in current_cave.paths:
+    #         if splitting[1] == rmm.name:
+    #             current_cave = rmm
+    #             move = True
+    #             rmm.enter(player_items)
+    #     if move == False:
+    #         print("You cannot move to that room")
 
-    elif splitting[0] == "look":
-        for item in current_cave.items:
-            print("There is: " + item)
+    # elif splitting[0] == "look":
+    #     for item in current_cave.items:
+    #         print("There is: " + item)
 
-    elif splitting[0] == "take":
-        taking_item = str(splitting[1])
-        c_room = current_cave
-        print(taking_item)
+    # elif splitting[0] == "take":
+    #     taking_item = str(splitting[1])
+    #     c_room = current_cave
+    #     print(taking_item)
 
-        if taking_item in current_cave.items:
-            player_items.append(taking_item)
-            print("Your current items is/are: " + str(player_items))
-        else:
-            print("You can't take anything")
+    #     if taking_item in current_cave.items:
+    #         player_items.append(taking_item)
+    #         print("Your current items is/are: " + str(player_items))
+    #     else:
+    #         print("You can't take anything")
 
-    elif splitting[0] == "use":
-        item_use = splitting[1]
-        if item_use in player_items:
-            print("You can use that item!")
+    # elif splitting[0] == "use":
+    #     item_use = splitting[1]
+    #     if item_use in player_items:
+    #         print("You can use that item!")
 
-    elif splitting[0] == "room":
-        print(str(current_cave.paths))
+    # elif splitting[0] == "room":
+    #     print(str(current_cave.paths))
 
-    elif splitting[0] == "attack" and current_cave.monster == True:
-        print("\n\n\n")
-        monster_vs(True)
+    # elif splitting[0] == "attack" and current_cave.monster == True:
+    #     print("\n\n\n")
+    #     monster_vs(True)
 
-        print(
-            "Yoohin Han : I'll have to kill you since you killed my little brother, I don't have any choice\n "
-        )
-    elif splitting[0] == "attack" and current_cave.monster == False:
-        print("There is nothing to hack in this room")
-    elif splitting[0] == "die":
-        print("You have die!")
-    else:
-        print("You can't do that")
+    #     print(
+    #         "Yoohin Han : I'll have to kill you since you killed my little brother, I don't have any choice\n "
+    #     )
+    # elif splitting[0] == "attack" and current_cave.monster == False:
+    #     print("There is nothing to hack in this room")
+    # elif splitting[0] == "die":
+    #     print("You have die!")
+    # else:
+    #     print("You can't do that")
 
 
 #------------------------------------------------------------------------------------
+answer = input("This is cave1 there is a high chance that the police is traking you \nDo you want to escape or stay at your place\nType 'escape' to escape or 'stay' to stay at yor home>>>\n")
+
+if answer == "escape":
+    print("\nYou have made a good choice\n the police was traking your steps, be more careful!")
+elif answer == "stay":
+    print("\nThe police arrested you, You have lost!")
+    exit()
+
+print("You have sucesfully passed level 1 you have to hack the company now!\n if you do not then they are going to win billions stealing from people!")
+answer2 = input("you have 3 options: not hack, hack them in a way")
 
 while user_playing:
     nav(player_question())
@@ -274,4 +285,4 @@ while user_playing:
 
 
 
-    
+#second part
