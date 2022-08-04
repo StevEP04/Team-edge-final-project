@@ -3,7 +3,6 @@
 # #Classes:
 user_playing = True
 player_items = []
-Darcksmoke_is_alive = True
 import random
 
 
@@ -277,8 +276,9 @@ elif answer == "stay":
     exit()
 
 print("You have sucesfully passed level 1 you have to hack the company now!\n if you do not then they are going to win billions stealing from people!")
-answer2 = input("you have 3 options: not hack, hack them in a way")
-
+answer2 = input("you have 3 options: not hack, hack them in a way \nType 'hack' to hack them 'not hack' to not hack them")
+ if answer == "not hack":
+     print("vhjfyfy")
 while user_playing:
     nav(player_question())
 
