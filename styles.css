@@ -21,12 +21,13 @@ body {
     font-family: 'ZCOOL QingKe HuangYou', cursive;
     text-shadow: #555;
     font-weight: 200;
+    font-size: 60px;
     width: 100%;
     padding-top: 10px;
     padding-bottom: 20px;
     color: white;  
     position: relative;
-    overflow: hidden;
+   
 }
 #title:before{
     content: '';
@@ -89,11 +90,10 @@ video {
     backdrop-filter: blur(3px);
 }
 .section {
-    background-color: white;
+    background-color: rgb(241, 241, 241);   
     position: relative;
-    height: 350px;
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30;
+    height: 600px;
+    border-radius: 35x;
 }
 .section ul {
     list-style-type: none;
@@ -102,7 +102,6 @@ video {
 }
 .container { 
     background-color: RGBA(255, 255, 255, 0.4);
-    backdrop-filter: blur(8px);
     box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
     border-radius: 25px;
     border-color: 2px solid black;
@@ -122,4 +121,59 @@ video {
     padding-bottom: 20px;
     color: black;  
     position: relative;
+}
+
+.exp div:hover {
+    padding: 50px;
+    padding-bottom: 30px;
+    transition: 1s;
+}
+.container h1 {
+    padding-bottom: 20px;
+}
+.container p {
+    padding-bottom: 30px;
+}
+.container img {
+    border-radius: 50px;
+    
+}
+.header {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 25px;
+    color: black;  
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+.parallax-image {
+    min-height: 650px;
+    transform: scale(1.1);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+.image-1 {
+    background-image: url("https://images.unsplash.com/photo-1570126646281-5ec88111777f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2341&q=80");
+}
+.image-2 {
+    background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+}
+iframe {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 25px;
+}       
+img {
+    padding: 5px;
+    border: 5px solid #2196F3;;
+}
+.tweet {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.larger {
+    height: 650px;
 }
