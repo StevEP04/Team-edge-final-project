@@ -8,6 +8,7 @@ html, body {
     transition-timing-function: ease-in;
     text-align: center;
     width: 100%;
+    overflow-x: hidden;
 }
 body {
     background-color: black;
@@ -17,12 +18,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: 'Courier New', monospace;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
     text-shadow: #555;
     font-weight: 200;
     width: 100%;
-    padding: 10px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     color: white;  
     position: relative;
     overflow: hidden;
@@ -33,28 +34,22 @@ body {
     bottom: 0;
     border-bottom: white solid 1px;
     width: 90%;
- }
-.border-underline {
-    width: 80%;
-    border-bottom: white dashed 1px;
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
+
 .video {
     width: 100%;
 } 
 video {
-    filter: blur(5px); 
     position: absolute; 
+    filter: blur(6px);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     left: 0;
     top: 0;
     width: 100%;
     z-index: -1;
-    outline: unset;
 }
+
 .parallax {
     min-height: 200px;  
     background-attachment: fixed;
@@ -62,4 +57,69 @@ video {
     background-repeat: no-repeat;
     background-size: cover;
 }
- 
+
+/* ::-webkit-scrollbar-button {
+    width: 8px;
+    right: 5px;
+}
+::-webkit-scrollbar-track {
+    color: transparent;
+    box-shadow: 1px 2px 2px white;
+}
+::-webkit-scrollbar-track-piece {
+    box-shadow: 1px 1px 3px white;
+}
+
+::-webkit-scrollbar-thumb {
+    color: aliceblue;
+}
+::-webkit-scrollbar-thumb:hover {
+    color: white;
+    transition: 1s;
+} */
+
+.body p{
+    color: white;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;;
+    font-weight: lighter;
+    font-size: 32px;
+    text-shadow: black;
+    border-radius: 24px;
+    background-color: RGBA(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px);
+}
+.section {
+    background-color: white;
+    position: relative;
+    height: 350px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30;
+}
+.section ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.container { 
+    background-color: RGBA(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    border-radius: 25px;
+    border-color: 2px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px 40px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    text-shadow: #555;
+    font-weight: 200;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: black;  
+    position: relative;
+}
